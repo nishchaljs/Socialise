@@ -5,7 +5,7 @@
 Requires python and node.
 
 1. ```pip install flask```
-2. ```cd client && npm install```
+2. ```cd socialmedia-client && npm install```
 
 ## Development
 
