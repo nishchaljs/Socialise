@@ -1,20 +1,32 @@
-# React Flask example
+# Twirrer | Social Network App
 
-## Installation
+I tried in this project to build an application similar to Twitter but certainly does not have all the features, but it contains the basic features such as (create an account, add a tweet, add a friend, like, comment, etc..).
 
-Requires python and node.
+## Live Demo
+[twirrer.netlify.app](https://twirrer.netlify.app/)
 
-1. ```pip install flask```
-2. ```cd socialmedia-client && npm install```
+## Project Screenshot
+![Twirrer screenshot](./home.PNG)
+![Twirrer screenshot](./twirrer.PNG)
 
-## Development
+## Project Features:
+- Nice design as Twitter design.
+- Fully responsive design (100%).
+- Dark/Light theme.
+- English/German languages.
+- Notifications in app. 
 
-1. In the client directory: ```npm start```
-2. In a separate terminal, in the root directory: ```python run.py```
-3. Go to [http://localhost:3000/](http://localhost:3000/)
+## Technologies used in the project:
+### 1- Backend:
+    - using 'Firebase cloud function' + 'Express.js' to build an API, to handle all operations with database.
+    - using 'Firebase Triggers' to execute some events in app like (fire notification, listen to user avatar changes, etc..).
+    - using 'Firebase Authentication' to handel login/signup users.
+    - using 'Firebase Firestore&Storage' to store data of the app (NoSQL database).
 
-## Production
-
-1. In the client directory: ```npm run build```
-2. After the build finishes: In the root directory: ```python run.py```
-3. Go to [http://localhost:5000/](http://localhost:5000/)
+### 2- Frontend:
+    - using 'React.js' to build the frontend of Twirrer.
+    - using 'React Hooks' to handle local state & 'React Context api' to handle global state in the app.
+    - using 'Axios' to execute all RestFull api requests in the app.
+    - implement infinite scroll (pure js) to posts in home page
+    - using 'SCSS, CSS Normalize & Css Resets'.
+    - using 'BEM' methodology to naming the items in HTML.
