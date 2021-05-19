@@ -145,6 +145,9 @@ function App() {
                    
                     {/* <Route component={Page404} /> */}
                      <Route exact path='/imagecaption' component={Home} /> 
+                     <Route exact path='/videotrans' component={Home}/>
+                     <Route exact path='/giftrans' component={Home}/>
+                     <Route exact path='/textcaption' component={Home}/>
 
                     
                   </Switch>

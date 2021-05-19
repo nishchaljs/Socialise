@@ -24,6 +24,7 @@ import WhoToAdd from "../../parts/WhoToAdd/WhoToAdd";
 import AddNewPost from "../../parts/AddNewPost/AddNewPost";
 import PinnedPost from "../../parts/PinnedPost/PinnedPost";
 import video from "./a.mp4"
+import gif from "./gif.gif"
 
 const Home = () => {
   // ******* start global state ******* //
@@ -126,7 +127,7 @@ const Home = () => {
           <ul class="photo__comments">
             <li class="photo__comment">
                 <input type="none" name="url" value={prop.link} style={{display: 'none'}}/>
-                <input type="submit" name="submit_button" value="submit"/>
+                <input type="submit" name="submit_button" value="submit" style="background-color: #4CAF50;"/>
             </li>
          </ul>
       </form>)
@@ -156,6 +157,23 @@ const Home = () => {
             </div>): (
             ""
           )}
+
+          {post.postContent?(
+             <div className='postCard'>
+                <form action="/textcaption">
+                    <ul class="photo__comments">
+                      <li class="photo__comment">
+                          <input type="none" name="url" value={post.postContent} style={{display: 'none'}}/>
+                          <input type="submit" name="submit_button" value="submit"/>
+                      </li>
+                   </ul>
+                </form>
+                <tokenhtl link={post.postImage}></tokenhtl>
+            </div>): (
+            ""
+          )}
+
+
           </div>
           );
       })}
@@ -203,11 +221,11 @@ const Home = () => {
          <video width="100%" height="100%" controls >
               <source src={video} type="video/mp4"/>
           </video>
-          <form action="/imagecaption" method="get">
-          <span class="photo__likes">5 likes</span>
+          <form action="/videotrans" method="get">
+          {/* <span class="photo__likes">5 likes</span> */}
             <ul class="photo__comments">
                 <li class="photo__comment">
-                    <span class="photo__comment-author"></span>
+                    {/* <span class="photo__comment-author"></span> */}
                     <input type="submit" name="submit_button" value="Do Something"/>
                 </li> 
                 <li class="photo__comment">
@@ -218,7 +236,24 @@ const Home = () => {
             </ul>
          </form>
        </div>
-
+       <div className='home-box__posts'>
+       <img src={gif} width="100%" height="100%" alt="Flowers in Chania"/>
+          <form action="/giftrans" method="get">
+          {/* <span class="photo__likes">5 likes</span> */}
+            <ul class="photo__comments">
+                <li class="photo__comment">
+                    {/* <span class="photo__comment-author"></span> */}
+                    <input type="submit" name="submit_button" value="Start transcript"/>
+                </li> 
+                <li class="photo__comment">
+                   <h3 className='show__hint' style={{ color: `${theme.typoMain}` }}>
+                        {window.token}
+                   </h3>
+                </li>
+            </ul>
+         </form>
+       </div>
+       
 
         {/* 'posts first fetch' section */}
         <div className='home-box__posts'>{firstPosts}</div>
