@@ -1,6 +1,6 @@
 # Socialise | Social Network App for physically challenged
 
-I tried in this project to build an application similar to Twitter but certainly does not have all the features, but it contains the basic features such as (create an account, add a tweet, add a friend, like, comment, etc..).
+Every person has an equal right to information and impairments shouldn’t restrict people from gaining this information. So, the main motive here is to make social media application, which is a source of information, more accessible to the blind,deaf and dumb. Provisions have to me made keeping in mind their difficulties and interests.
 
 ## Project Screenshot
 ![Socialise screenshot](Screenshots/workflow.png)  
